@@ -1,12 +1,6 @@
 from django.contrib.auth.models import AbstractUser
-from django.apps import AppConfig
 from django.db import models
 from materials.models import Course, Lesson
-
-class UsersConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'users'
-
 
 # Create your models here.
 class User(AbstractUser):

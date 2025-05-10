@@ -1,5 +1,4 @@
 from django.db import models
-from users.models import User
 
 
 class Course(models.Model):
@@ -83,7 +82,7 @@ class Lesson(models.Model):
 class Subscription(models.Model):
     objects = None
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, blank=True, null=True
+        "users.User", on_delete=models.CASCADE, blank=True, null=True
     )
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
 

@@ -20,20 +20,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users.apps.UsersConfig',
     'rest_framework',
     'rest_framework_simplejwt',
-]
-
-MY_APPS = [
     'users',
-    'education',
     'drf_yasg',
-    'corsheaders'
-
+    'materials',
 ]
-
-INSTALLED_APPS += MY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -94,7 +86,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "ru"
 
-TIME_ZONE = os.getenv("TIME_ZONE")
+TIME_ZONE = "Europe/Moscow"
 
 USE_I18N = True
 
